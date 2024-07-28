@@ -28,7 +28,7 @@ class _EncryptDecryptPageState extends State<EncryptDecryptPage> {
       encrypt.Key.fromUtf8('my 32 length key..................');
   final encrypt.IV _iv = encrypt.IV.fromLength(16);
   final encrypt.Encrypter _encrypter = encrypt.Encrypter(
-      encrypt.AES(encrypt.Key.fromUtf8('my 32 length key.................')));
+      encrypt.AES(encrypt.Key.fromUtf8('my 32 length key..................')));
 
   void _encryptMessage() {
     final encrypted = _encrypter.encrypt(_controller.text, iv: _iv);
