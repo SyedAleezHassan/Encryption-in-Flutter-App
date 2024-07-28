@@ -24,9 +24,11 @@ class _EncryptDecryptPageState extends State<EncryptDecryptPage> {
   String _encryptedMessage = '';
   String _decryptedMessage = '';
 
-  final encrypt.Key _key = encrypt.Key.fromUtf8('my 32 length key................');
+  final encrypt.Key _key =
+      encrypt.Key.fromUtf8('my 32 length key................');
   final encrypt.IV _iv = encrypt.IV.fromLength(16);
-  final encrypt.Encrypter _encrypter = encrypt.Encrypter(encrypt.AES(encrypt.Key.fromUtf8('my 32 length key................')));
+  final encrypt.Encrypter _encrypter = encrypt.Encrypter(
+      encrypt.AES(encrypt.Key.fromUtf8('my 32 length key.................')));
 
   void _encryptMessage() {
     final encrypted = _encrypter.encrypt(_controller.text, iv: _iv);
@@ -54,7 +56,8 @@ class _EncryptDecryptPageState extends State<EncryptDecryptPage> {
           children: [
             TextField(
               controller: _controller,
-              decoration: InputDecoration(labelText: 'Enter message to encrypt'),
+              decoration:
+                  InputDecoration(labelText: 'Enter message to encrypt'),
             ),
             SizedBox(height: 16),
             ElevatedButton(
