@@ -25,7 +25,7 @@ class _EncryptDecryptPageState extends State<EncryptDecryptPage> {
   String _decryptedMessage = '';
 
   final encrypt.Key _key =
-      encrypt.Key.fromUtf8('my 32 length key................');
+      encrypt.Key.fromUtf8('my 32 length key..................');
   final encrypt.IV _iv = encrypt.IV.fromLength(16);
   final encrypt.Encrypter _encrypter = encrypt.Encrypter(
       encrypt.AES(encrypt.Key.fromUtf8('my 32 length key.................')));
